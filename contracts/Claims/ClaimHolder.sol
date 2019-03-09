@@ -33,6 +33,7 @@ contract ClaimHolder is ERC735 {
         claims[claimId].signature = _signature;
         claims[claimId].data = _data;
         claims[claimId].uri = _uri;
+        claims[claimId].isValid = true;
 
         claimsByTopic[_topic].push(claimId);
 
@@ -82,6 +83,7 @@ contract ClaimHolder is ERC735 {
         claims[_claimId].data = _data;
         claims[_claimId].uri = _uri;
         claims[_claimId].recipientApproval = false;
+        claims[_claimId].isValid = true;
 
         emit ClaimChanged(
             _claimId,
@@ -107,7 +109,7 @@ contract ClaimHolder is ERC735 {
         bytes32 data = claims[_claimId].data;
         string memory uri = claims[_claimId].uri;
 
-        delete claims[_claimId];
+        claims[_claimId].isValid = false;
 
 
         emit ClaimRemoved(
