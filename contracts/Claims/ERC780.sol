@@ -1,4 +1,4 @@
-pragma solidity ^0.5.4;
+pragma solidity ^0.5.2;
 
 interface ERC780 {
     event ClaimSet(address indexed issuer, address indexed subject, bytes32 indexed key, bytes32 value);

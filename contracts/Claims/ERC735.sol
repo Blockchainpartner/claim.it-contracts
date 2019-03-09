@@ -1,4 +1,4 @@
-pragma solidity ^0.5.4; 
+pragma solidity ^0.5.2;
 interface ERC735 {
     event ClaimApprovalToggled(bytes32 indexed claimId, bytes32 indexed topic, uint256 scheme, address indexed issuer, bytes32 signature, bytes32 data, string uri);
     event ClaimAdded(bytes32 indexed claimId, bytes32 indexed topic, uint256 scheme, address indexed issuer, bytes32 signature, bytes32 data, string uri);

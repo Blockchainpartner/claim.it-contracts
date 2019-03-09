@@ -1,4 +1,4 @@
-pragma solidity ^0.5.4;
+pragma solidity ^0.5.2;
 
 import './ERC735.sol';
 import './ERC780.sol';

@@ -1,4 +1,4 @@
-pragma solidity ^0.5.4; interface ERC725 {
+pragma solidity ^0.5.2; interface ERC725 {
     event DataChanged(bytes32 indexed key, bytes32 indexed value);
     event ContractCreated(address indexed contractAddress);
     function getData(bytes32 _key) external view returns (bytes32 _value);
